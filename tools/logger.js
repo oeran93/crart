@@ -2,7 +2,7 @@ const fs = require('fs')
 
 module.exports = function (log_file = 'log.txt') {
 
-  public = {}
+  let public = {}
 
   /*
   * write to log

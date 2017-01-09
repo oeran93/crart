@@ -8,7 +8,7 @@ module.exports = function (passport) {
   })
 
   passport.deserializeUser((id, done) => {
-    User.findById(id, (err, user) => {
+    Admin.findById(id, (err, user) => {
       done(err, user)
     })
   })
@@ -22,7 +22,7 @@ module.exports = function (passport) {
 }
 
 function facebookAuth (token, refreshToken, profile, done) {
-  User.findOne({'facebook.id': profile.id}, (err, user) => {
+  Admin.findOne({'facebook.id': profile.id}, (err, user) => {
     if (err) return done(err)
     if (user) {
       return done(null, user)

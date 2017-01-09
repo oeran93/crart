@@ -1,6 +1,6 @@
-var database = require('./database/start.js')
-var app = require('./app.js')(database)
-var port = 80
+const database = require('./database/start.js')
+const app      = require('./app.js')(database)
+const port     = 80
 
 /*Start the server*/
 app.listen(port, () => {

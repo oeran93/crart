@@ -22,7 +22,7 @@ module.exports = function (db) {
   }))
   app.use(passport.initialize())
   app.use(passport.session())
-  app.use(express.static(__dirname + 'sharer/views/static'))
+  app.use(express.static(__dirname + '/sharer/views/static'))
   sharer_router(app)
   auth_router(app,passport)
   return app

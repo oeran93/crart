@@ -9,8 +9,8 @@ const Article = new Schema ({
   description: String,
   complexity: Number,
   image: String,
-  tags: [String],
-  added: Date.now()
+  tags_: [{type: Schema.Types.ObjectId, ref: 'Tag'}],
+  added: Date
 })
 
 module.exports = mongoose.model('Article',Article,'Article')
